@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyBook | Flight Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sky<span>Book</span></h1>
+    <p>Search and compare flights</p>
+  </header>
+
+  <form id="search-form">
+    <div class="field">
+      <label for="from">From</label>
+      <select id="from" required>
+        <option value="">Select city</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bhopal</option>
+        <option>Bangalore</option>
+        <option>Kolkata</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="to">To</label>
+      <select id="to" required>
+        <option value="">Select city</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bhopal</option>
+        <option>Bangalore</option>
+        <option>Kolkata</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+    </div>
+
+    <div class="field">
+      <label for="passengers">Passengers</label>
+      <input type="number" id="passengers" min="1" max="6" value="1" required>
+    </div>
+
+    <button type="submit">Search Flights</button>
+  </form>
+
+  <section id="results"></section>
+
+  <section class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="dest-grid">
+      <div class="dest-card dest-1">
+        <span>Goa</span>
+        <p>From ₹2,199</p>
+      </div>
+      <div class="dest-card dest-2">
+        <span>Manali</span>
+        <p>From ₹3,499</p>
+      </div>
+      <div class="dest-card dest-3">
+        <span>Kerala</span>
+        <p>From ₹2,799</p>
+      </div>
+      <div class="dest-card dest-4">
+        <span>Jaipur</span>
+        <p>From ₹1,999</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Book With SkyBook</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Best Price Guarantee</h3>
+        <p>We compare fares across airlines to find you the lowest price.</p>
+      </div>
+      <div class="why-card">
+        <h3>Free Cancellation</h3>
+        <p>Change your plans without losing money on most fares.</p>
+      </div>
+      <div class="why-card">
+        <h3>24/7 Support</h3>
+        <p>Our team is available around the clock for any booking issue.</p>
+      </div>
+      <div class="why-card">
+        <h3>Secure Payments</h3>
+        <p>All transactions are encrypted and safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers">
+    <h2>Current Offers</h2>
+    <div class="offer-card">
+      <h3>Flat ₹500 off</h3>
+      <p>On your first booking with code <strong>FIRST500</strong></p>
+    </div>
+    <div class="offer-card">
+      <h3>10% off for Students</h3>
+      <p>Use code <strong>STUDENT10</strong> with a valid college ID</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Can I cancel my booking?</h3>
+      <p>Yes, most fares allow free cancellation up to 24 hours before departure.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need to print my ticket?</h3>
+      <p>No, a digital boarding pass on your phone is accepted at most airports.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I pick my seat?</h3>
+      <p>Seat selection is available after booking is confirmed.</p>
+    </div>
+  </section>
+
+  <div id="booking-modal" class="hidden">
+    <div class="modal-box">
+      <h2>Confirm Booking</h2>
+      <p id="modal-details"></p>
+      <input type="text" id="passenger-name" placeholder="Passenger full name" required>
+      <div class="modal-buttons">
+        <button id="confirm-btn">Confirm</button>
+        <button id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>SkyBook is a demo project built for learning purposes. Not a real booking platform.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

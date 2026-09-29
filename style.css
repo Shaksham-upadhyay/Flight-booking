@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header span {
+  color: #ffb703;
+}
+
+#search-form {
+  max-width: 900px;
+  margin: -30px auto 0;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 140px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.field select, .field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#search-form button {
+  align-self: flex-end;
+  background: #0b3d91;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#results {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.flight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.flight-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.airline {
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.timing p {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #0b3d91;
+  font-size: 1.1rem;
+}
+
+.book-btn {
+  background: #ffb703;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.destinations, .why-us, .offers, .faq {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.destinations h2, .why-us h2, .offers h2, .faq h2 {
+  margin-bottom: 20px;
+  color: #0b3d91;
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.dest-card {
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.dest-card p {
+  font-weight: normal;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.dest-1 { background: linear-gradient(135deg, #ff9a76, #ff6f61); }
+.dest-2 { background: linear-gradient(135deg, #56ccf2, #2f80ed); }
+.dest-3 { background: linear-gradient(135deg, #43cea2, #185a9d); }
+.dest-4 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.why-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.why-card h3 {
+  color: #0b3d91;
+  margin-bottom: 8px;
+}
+
+.offer-card {
+  background: #fff3cd;
+  border-left: 4px solid #ffb703;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.offer-card h3 {
+  margin-bottom: 4px;
+}
+
+.faq-item {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.faq-item h3 {
+  color: #0b3d91;
+  margin-bottom: 6px;
+}
+
+#booking-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#booking-modal.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-box h2 {
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confirm-btn {
+  background: #0b3d91;
+  color: white;
+}
+
+#cancel-btn {
+  background: #eee;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  background: #eef1f5;
+}
