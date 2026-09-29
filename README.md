@@ -23,9 +23,6 @@ A front-end flight search and booking demo built with HTML, CSS, and JavaScript.
 
 No installation, build steps, or backend required.
 
-## Live Demo
-[Add your GitHub Pages link here once enabled]
-
 ## Concepts Practiced
 DOM manipulation, event listeners, array methods (map, filter, forEach), form validation, modal windows, responsive grid layouts
 
